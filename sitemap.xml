@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+     <loc>https://vksdk.github.io/vk-sdk-kotlin/</loc>
+     <lastmod>2020-09-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://vksdk.github.io/vk-sdk-kotlin/usage/</loc>
+     <lastmod>2020-09-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://vksdk.github.io/vk-sdk-kotlin/http-clients/</loc>
+     <lastmod>2020-09-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://vksdk.github.io/vk-sdk-kotlin/changelog/</loc>
+     <lastmod>2020-09-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>

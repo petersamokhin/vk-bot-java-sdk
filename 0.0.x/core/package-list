@@ -1,0 +1,14 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+
+com.petersamokhin.vksdk.core.api
+com.petersamokhin.vksdk.core.api.botslongpoll
+com.petersamokhin.vksdk.core.callback
+com.petersamokhin.vksdk.core.client
+com.petersamokhin.vksdk.core.error
+com.petersamokhin.vksdk.core.http
+com.petersamokhin.vksdk.core.io
+com.petersamokhin.vksdk.core.model
+com.petersamokhin.vksdk.core.model.event
+com.petersamokhin.vksdk.core.model.objects
+com.petersamokhin.vksdk.core.utils

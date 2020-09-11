@@ -1,0 +1,1137 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="VK SDK Kotlin">
+      
+      
+        <link rel="canonical" href="https://vksdk.github.io/vk-sdk-kotlin/usage/">
+      
+      
+        <meta name="author" content="Peter Samokhin">
+      
+      <link rel="shortcut icon" href="../images/logo_round.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>Usage - VK SDK Kotlin</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.6a5ad368.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4051b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#usage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://vksdk.github.io/vk-sdk-kotlin" title="VK SDK Kotlin" class="md-header-nav__button md-logo" aria-label="VK SDK Kotlin">
+      
+  <img src="../images/logo_round.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            VK SDK Kotlin
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Usage
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/vksdk/vk-sdk-kotlin/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    vk-sdk-kotlin
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://vksdk.github.io/vk-sdk-kotlin" title="VK SDK Kotlin" class="md-nav__button md-logo" aria-label="VK SDK Kotlin">
+      
+  <img src="../images/logo_round.png" alt="logo">
+
+    </a>
+    VK SDK Kotlin
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/vksdk/vk-sdk-kotlin/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    vk-sdk-kotlin
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Usage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Usage" class="md-nav__link md-nav__link--active">
+      Usage
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    Artifacts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vksettings" class="md-nav__link">
+    VkSettings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-requests" class="md-nav__link">
+    API requests
+  </a>
+  
+    <nav class="md-nav" aria-label="API requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-call" class="md-nav__link">
+    Synchronous call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynchronous-call" class="md-nav__link">
+    Asynchronous call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-requests" class="md-nav__link">
+    Batch requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flows-for-requests" class="md-nav__link">
+    Flows for requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-messages" class="md-nav__link">
+    Send messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Send messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-on-events" class="md-nav__link">
+    React on events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-clients" class="md-nav__link">
+    HTTP clients
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../http-clients/" title="HTTP clients" class="md-nav__link">
+      HTTP clients
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      0.0.x API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="0.0.x API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        0.0.x API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.0.x/core/index.html" title="core" class="md-nav__link">
+      core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.0.x/common-ktor-http-client/index.html" title="common-ktor-http-client" class="md-nav__link">
+      common-ktor-http-client
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../0.0.x/jvm-okhttp-http-client/index.html" title="jvm-okhttp-http-cloent" class="md-nav__link">
+      jvm-okhttp-http-cloent
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../changelog/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    Artifacts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vksettings" class="md-nav__link">
+    VkSettings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-requests" class="md-nav__link">
+    API requests
+  </a>
+  
+    <nav class="md-nav" aria-label="API requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-call" class="md-nav__link">
+    Synchronous call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynchronous-call" class="md-nav__link">
+    Asynchronous call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-requests" class="md-nav__link">
+    Batch requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flows-for-requests" class="md-nav__link">
+    Flows for requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-messages" class="md-nav__link">
+    Send messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Send messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react-on-events" class="md-nav__link">
+    React on events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-clients" class="md-nav__link">
+    HTTP clients
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vksdk/vk-sdk-kotlin/edit/master/docs/usage.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
+<p>See the <a href="https://github.com/vksdk/vk-sdk-kotlin/tree/master/examples">example projects</a>:</p>
+<ul>
+<li>Most detailed example, written in Kotlin:<ul>
+<li><a href="https://github.com/vksdk/vk-sdk-kotlin/tree/master/examples/jvm-kotlin-example">https://github.com/vksdk/vk-sdk-kotlin/tree/master/examples/jvm-kotlin-example</a></li>
+</ul>
+</li>
+<li>Minimal example without Kotlin in dependencies:<ul>
+<li><a href="https://github.com/vksdk/vk-sdk-kotlin/tree/master/examples/jvm-only-java-example">https://github.com/vksdk/vk-sdk-kotlin/tree/master/examples/jvm-only-java-example</a></li>
+</ul>
+</li>
+<li>Minimal multiplatform app example (single activity on Android and SwiftUI on iOS):<ul>
+<li><a href="https://github.com/vksdk/vk-sdk-kotlin/tree/master/examples/mpp-example">https://github.com/vksdk/vk-sdk-kotlin/tree/master/examples/mpp-example</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="artifacts">Artifacts<a class="headerlink" href="#artifacts" title="Permanent link">&para;</a></h3>
+<p>List of all available artifacts:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-jvm-okhttp:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-jvm:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-jvm:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-js:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-js:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-iosX64:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-iosX64:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-iosArm32:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-iosArm32:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-iosArm64:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-iosArm64:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-tvosX64:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-tvosX64:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-tvosArm64:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-tvosArm64:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-watchosX86:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-watchosX86:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-watchosArm32:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-watchosArm32:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-watchosArm64:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-watchosArm64:$vkSdkVersion&quot;</span>
+
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:core-macosX64:$vkSdkVersion&quot;</span>
+<span class="n">implementation</span> <span class="s2">&quot;com.petersamokhin.vksdk:http-client-common-ktor-macosX64:$vkSdkVersion&quot;</span>
+</code></pre></div>
+
+
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h3 id="vksettings">VkSettings<a class="headerlink" href="#vksettings" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">vkClientSettings</span> <span class="p">=</span> <span class="n">VkSettings</span><span class="p">(</span>
+    <span class="c1">// HTTP client is required</span>
+    <span class="n">httpClient</span> <span class="p">=</span> <span class="n">httpClient</span><span class="p">,</span>                    
+
+    <span class="c1">// Default is [VkApi.DEFAULT_VERSION], 5.122 for 0.0.7</span>
+    <span class="c1">// See: https://vk.com/dev/versions</span>
+    <span class="n">apiVersion</span> <span class="p">=</span> <span class="m">5.122</span><span class="p">,</span>                         
+
+    <span class="c1">// Default params are empty</span>
+    <span class="n">defaultParams</span> <span class="p">=</span> <span class="n">paramsOf</span><span class="p">(</span><span class="s">&quot;lang&quot;</span> <span class="n">to</span> <span class="s">&quot;en&quot;</span><span class="p">),</span>   
+
+    <span class="c1">// Default is 3. Provide [VkApi.EXECUTE_MAX_REQUESTS_PER_SECOND_DISABLED] to disable the `execute` queue loop</span>
+    <span class="n">maxExecuteRequestsPerSecond</span> <span class="p">=</span> <span class="m">3</span><span class="p">,</span>
+
+    <span class="c1">// Default is Dispatchers.Default from the kotlin coroutines common module</span>
+    <span class="c1">// See the mutiplatform example and iOS note for ktor</span>
+    <span class="n">backgroundDispatcher</span> <span class="p">=</span> <span class="n">Dispatchers</span><span class="p">.</span><span class="n">Default</span><span class="p">,</span> 
+
+    <span class="n">json</span> <span class="p">=</span> <span class="n">Json</span> <span class="p">{</span> <span class="cm">/* your configuration */</span> <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
+<p>This client is used in all the snippets in next sections.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">client</span> <span class="p">=</span> <span class="n">VkApiClient</span><span class="p">(</span>
+    <span class="c1">// User or Community id</span>
+    <span class="n">id</span> <span class="p">=</span> <span class="m">151083290</span><span class="p">,</span>
+
+    <span class="c1">// VK API access token. Must have `offline` scope to not have the expire time</span>
+    <span class="c1">// More: https://vk.com/dev/access_token</span>
+    <span class="n">token</span> <span class="p">=</span> <span class="s">&quot;abcdef123456...&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Working with the messages API available only for Communities</span>
+    <span class="n">type</span> <span class="p">=</span> <span class="n">VkApiClient</span><span class="p">.</span><span class="n">Type</span><span class="p">.</span><span class="n">Community</span><span class="p">,</span>
+
+    <span class="c1">// See the previous snippet</span>
+    <span class="n">settings</span> <span class="p">=</span> <span class="n">vkSettings</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Also, for server-side applications, useful to do something on user behalf, but it is not safe to send the access token from client.
+<a href="https://vk.com/dev/authcode_flow_user">Authorization code flow</a> can help here.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// From here: https://vk.com/apps?act=manage</span>
+<span class="c1">// Choose the app and get the ID and the other info from app settings</span>
+<span class="c1">// App ID, Secure key, etc.</span>
+<span class="k">val</span> <span class="py">appInfo</span> <span class="p">=</span> <span class="n">AppInfo</span><span class="p">(</span>
+    <span class="n">clientId</span> <span class="p">=</span> <span class="m">123456789</span><span class="p">,</span>
+    <span class="n">clientSecret</span> <span class="p">=</span> <span class="s">&quot;abcdef12345...&quot;</span><span class="p">,</span>
+    <span class="n">redirectUri</span> <span class="p">=</span> <span class="s">&quot;https://oauth.vk.com/blank.html&quot;</span>
+<span class="p">)</span>
+
+<span class="k">val</span> <span class="py">client</span> <span class="p">=</span> <span class="n">VkApiClient</span><span class="p">.</span><span class="n">fromCode</span><span class="p">(</span>
+    <span class="c1">// Code from the client</span>
+    <span class="n">code</span> <span class="p">=</span> <span class="s">&quot;abcdef12345...&quot;</span><span class="p">,</span>
+
+    <span class="c1">// App info, see above</span>
+    <span class="n">app</span> <span class="p">=</span> <span class="n">appInfo</span><span class="p">,</span>
+
+    <span class="c1">// See the previous snippets; settings for the client</span>
+    <span class="c1">// Client always is the User for the Code flow</span>
+    <span class="n">settings</span> <span class="p">=</span> <span class="n">vkSettings</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="api-requests">API requests<a class="headerlink" href="#api-requests" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Note about the responses</p>
+<p>Usually VK responses contain <code>response</code> field with the requested data. 
+But, when you are using the <code>execute</code> API method, each object from usual <code>response</code> field is placed into array.
+So, in this case, if you use <code>client.call</code> with <code>batch = true</code>, the unwrapped object will be returned into the callback.
+If you made the call without putting into the batch queue, the wrapped object is returned.
+Remember this when you will parse the responses.</p>
+</div>
+<p>You can reuse the requests in this way:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Request information</span>
+<span class="k">val</span> <span class="py">request</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="s">&quot;users.get&quot;</span><span class="p">,</span> <span class="n">paramsOf</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span> <span class="n">to</span> <span class="m">1</span><span class="p">))</span>
+</code></pre></div>
+
+
+<h3 id="synchronous-call">Synchronous call<a class="headerlink" href="#synchronous-call" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// It is always the string, you should parse it by yourself</span>
+<span class="k">val</span> <span class="py">response</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h3 id="asynchronous-call">Asynchronous call<a class="headerlink" href="#asynchronous-call" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">request</span><span class="p">.</span><span class="n">enqueue</span><span class="p">(</span><span class="k">object</span> <span class="p">:</span> <span class="nc">Callback</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onResult</span><span class="p">(</span><span class="n">result</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// It is always the string, you should parse it by yourself</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onError</span><span class="p">(</span><span class="n">error</span><span class="p">:</span> <span class="n">Exception</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;Some error occurred:&quot;</span><span class="p">)</span>
+        <span class="n">error</span><span class="p">.</span><span class="n">printStackTrace</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+
+
+<h3 id="batch-requests">Batch requests<a class="headerlink" href="#batch-requests" title="Permanent link">&para;</a></h3>
+<p>Requests from the batch queue made as soon as possible based on count of requests in the queue.
+Using this you cannot exceed the limit of requests per second of VK API.
+The callback uses <code>JsonElement</code> because VK <code>execute</code> method returning the array of the responses, it is parsed and necessary element is returned to the callback.
+It can be <code>false</code> in case of an error.</p>
+<p>Pass the callback:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">batch</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="k">object</span> <span class="p">:</span> <span class="nc">Callback</span><span class="p">&lt;</span><span class="n">JsonElement</span><span class="p">&gt;</span> <span class="p">{</span>
+   <span class="k">override</span> <span class="k">fun</span> <span class="nf">onResult</span><span class="p">(</span><span class="n">result</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+       <span class="c1">// It is always the JsonElement, you should parse it by yourself</span>
+   <span class="p">}</span>
+
+   <span class="k">override</span> <span class="k">fun</span> <span class="nf">onError</span><span class="p">(</span><span class="n">error</span><span class="p">:</span> <span class="n">Exception</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">println</span><span class="p">(</span><span class="s">&quot;Some error occurred:&quot;</span><span class="p">)</span>
+       <span class="n">error</span><span class="p">.</span><span class="n">printStackTrace</span><span class="p">()</span>
+   <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+
+
+<p>Or use two callbacks</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">batch</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="n">onResult</span> <span class="p">=</span> <span class="p">{</span> <span class="n">result</span><span class="p">:</span> <span class="n">JsonElement</span> <span class="p">-&gt;</span>
+    <span class="c1">// It is always the JsonElement, you should parse it by yourself</span>
+<span class="p">},</span> <span class="n">onError</span> <span class="p">=</span> <span class="p">{</span> <span class="n">error</span><span class="p">:</span> <span class="n">Exception</span> <span class="p">-&gt;</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Some error occurred:&quot;</span><span class="p">)</span>
+    <span class="n">error</span><span class="p">.</span><span class="n">printStackTrace</span><span class="p">()</span>
+<span class="p">})</span>
+</code></pre></div>
+
+
+<p>Also, you can pass parameters, not only the request object</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="s">&quot;users.get&quot;</span><span class="p">,</span> <span class="n">paramsOf</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span> <span class="n">to</span> <span class="m">1</span><span class="p">),</span> <span class="n">batch</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="cm">/* callbacks */</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Do as many requests as you want</p>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">0</span> <span class="n">until</span> <span class="m">500</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">client</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="s">&quot;users.get&quot;</span><span class="p">,</span> <span class="n">paramsOf</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span> <span class="n">to</span> <span class="m">1</span><span class="p">),</span> <span class="n">batch</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="cm">/* callbacks */</span><span class="p">)</span>
+    <span class="c1">// without any delay() !</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Pass all of them in one time:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">requests</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">BatchRequestItem</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">userId</span> <span class="p">-&gt;</span> <span class="n">client</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="s">&quot;users.get&quot;</span><span class="p">,</span> <span class="n">paramsOf</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span> <span class="n">to</span> <span class="n">userId</span><span class="p">))</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">request</span> <span class="p">-&gt;</span> <span class="n">BatchRequestItem</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="k">object</span><span class="p">:</span> <span class="n">Callback</span><span class="p">&lt;</span><span class="n">JsonElement</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* */</span> <span class="p">})</span> <span class="p">}</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="n">requests</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h3 id="flows-for-requests">Flows for requests<a class="headerlink" href="#flows-for-requests" title="Permanent link">&para;</a></h3>
+<p>All the functionality based on the <code>Flows</code> is available from the delegate:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">flows</span><span class="p">:</span> <span class="n">VkApiClientFlows</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">flows</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Other things are the same:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">flows</span><span class="p">()</span>
+    <span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">batch</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="c1">// or provide the method name and the parameters</span>
+    <span class="p">.</span><span class="n">onEach</span> <span class="p">{</span> <span class="n">result</span><span class="p">:</span> <span class="n">JsonElement</span> <span class="p">-&gt;</span> <span class="cm">/* do something */</span> <span class="p">}</span>
+    <span class="p">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">e</span> <span class="p">-&gt;</span> <span class="cm">/* do something */</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">flowOn</span><span class="p">(</span><span class="n">Dispatchers</span><span class="p">.</span><span class="n">IO</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">launchIn</span><span class="p">(</span><span class="n">lifecycleScope</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="send-messages">Send messages<a class="headerlink" href="#send-messages" title="Permanent link">&para;</a></h2>
+<p>Use the DSL:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">sendMesage</span> <span class="p">{</span>
+    <span class="n">peerId</span> <span class="p">=</span> <span class="m">12345678901</span>
+    <span class="n">message</span> <span class="p">=</span> <span class="s">&quot;Hello, World!&quot;</span>
+    <span class="n">attachment</span> <span class="p">=</span> <span class="s">&quot;photo1234_5678,photo1234_1234&quot;</span>
+
+<span class="p">}.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Or use the builder:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">message</span> <span class="p">=</span> <span class="n">Message</span><span class="p">()</span>
+    <span class="p">.</span><span class="n">peerId</span><span class="p">(</span><span class="m">12345678901</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
+
+<span class="c1">// Then send</span>
+<span class="k">val</span> <span class="py">request</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="c1">// or else in this way</span>
+<span class="k">val</span> <span class="py">request</span> <span class="p">=</span> <span class="n">message</span><span class="p">.</span><span class="n">sendFrom</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+
+<span class="c1">// Don&#39;t forget this!</span>
+<span class="n">request</span><span class="p">.</span><span class="n">execute</span><span class="p">()</span> <span class="c1">// or use flows, callbacks and whatever you want</span>
+</code></pre></div>
+
+
+<h3 id="keyboard">Keyboard<a class="headerlink" href="#keyboard" title="Permanent link">&para;</a></h3>
+<p>Use the DSL:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">sendMessage</span> <span class="p">{</span>
+    <span class="n">peerId</span> <span class="p">=</span> <span class="m">12345678901</span>
+    <span class="n">message</span> <span class="p">=</span> <span class="s">&quot;Hello, World!&quot;</span>
+    <span class="n">keyboard</span> <span class="p">=</span> <span class="n">keyboard</span><span class="p">(</span><span class="n">oneTime</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// or `inlineKeyboard` for inline</span>
+       <span class="n">row</span> <span class="p">{</span>
+           <span class="n">primaryButton</span><span class="p">(</span><span class="s">&quot;Blue pill&quot;</span><span class="p">)</span> <span class="p">{</span>
+               <span class="n">payload</span> <span class="p">=</span> <span class="s">&quot;{}&quot;</span> <span class="c1">// etc.</span>
+           <span class="p">}</span>
+           <span class="n">negativeButton</span><span class="p">(</span><span class="s">&quot;Red pill&quot;</span><span class="p">)</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
+<p>All the functionality needed for the uploading is available from the delegate:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">uploader</span><span class="p">:</span> <span class="n">VkApiUploader</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">uploader</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Simply attach the image:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">peerId</span> <span class="p">=</span> <span class="m">12345678901</span>
+
+<span class="k">val</span> <span class="py">imageAttachmentString</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">uploader</span><span class="p">().</span><span class="n">uploadPhotoForMessage</span><span class="p">(</span>
+    <span class="n">peerId</span><span class="p">,</span>
+    <span class="c1">// or FileOnDisk(path = &quot;/Users/you/Documents/img.png&quot;)</span>
+    <span class="c1">// or ByteArray</span>
+    <span class="n">url</span> <span class="p">=</span> <span class="s">&quot;https://example.com/image.png&quot;</span>
+<span class="p">)</span>
+<span class="c1">// imageAttachmentString is something like &#39;photo987654321_1234&#39;</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">sendMessage</span> <span class="p">{</span>
+    <span class="n">peerId</span> <span class="p">=</span> <span class="n">necessaryPeerId</span>
+    <span class="n">attachment</span> <span class="p">=</span> <span class="n">imageAttachmentString</span>
+<span class="p">}.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Attach whatever you want, e.g audio message:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">necessaryPeerId</span> <span class="p">=</span> <span class="m">12345678901</span>
+<span class="k">val</span> <span class="py">attachmentType</span> <span class="p">=</span> <span class="s">&quot;audio_message&quot;</span>
+
+<span class="c1">// VK&#39;s process of attachments uploading is boring</span>
+<span class="c1">// and covered fully by this method,</span>
+<span class="c1">// but responses are dynamic and can not be serialized in one time for all cases</span>
+<span class="c1">// See: https://vk.com/dev/upload_files</span>
+<span class="k">val</span> <span class="py">docAttachmentString</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">uploader</span><span class="p">().</span><span class="n">uploadContent</span><span class="p">(</span>
+    <span class="s">&quot;docs.getMessagesUploadServer&quot;</span><span class="p">,</span> <span class="c1">// First step: method for retrieving of the `upload_url`</span>
+    <span class="s">&quot;docs.save&quot;</span><span class="p">,</span>                    <span class="c1">// Last step: save the attachment on the VK server (can you VK guys do it under the hood?)</span>
+    <span class="n">params</span> <span class="p">=</span> <span class="n">paramsOf</span><span class="p">(</span><span class="s">&quot;type&quot;</span> <span class="n">to</span> <span class="n">attachmentType</span><span class="p">,</span> <span class="s">&quot;peer_id&quot;</span> <span class="n">to</span> <span class="n">necessaryPeerId</span><span class="p">),</span>
+    <span class="n">items</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
+        <span class="n">UploadableContent</span><span class="p">.</span><span class="n">File</span><span class="p">(</span>
+            <span class="n">fieldName</span> <span class="p">=</span> <span class="s">&quot;file&quot;</span><span class="p">,</span>
+            <span class="c1">// Provide these params but don&#39;t worry about their values;</span>
+            <span class="c1">// but without them you will receive the error response.</span>
+            <span class="n">fileName</span> <span class="p">=</span> <span class="s">&quot;doesn&#39;t matter, but VK API is not stable; fileName must not be empty&quot;</span><span class="p">,</span>
+            <span class="n">mediaType</span> <span class="p">=</span> <span class="s">&quot;also doesn&#39;t matter&quot;</span><span class="p">,</span>
+            <span class="n">file</span> <span class="p">=</span> <span class="n">FileOnDisk</span><span class="p">(</span><span class="s">&quot;/Users/petersamokhin/Desktop/test.mp3&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">).</span><span class="n">let</span> <span class="p">{</span> <span class="n">response</span><span class="p">:</span> <span class="n">String</span> <span class="p">-&gt;</span>
+    <span class="c1">// Request is synchronous. You should parse the response by yourself</span>
+    <span class="n">retrieveAttachment</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">attachmentType</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">sendMessage</span> <span class="p">{</span>
+    <span class="n">peerId</span> <span class="p">=</span> <span class="n">necessaryPeerId</span>
+    <span class="c1">// or docAttachmentString, based on your implementation of retrieveAttachment methodd</span>
+    <span class="n">attachment</span> <span class="p">=</span> <span class="s">&quot;doc${docAttachmentString}&quot;</span>
+<span class="p">}.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Types of <code>items</code>:
+<strong>Bytes</strong> array:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">byteArray</span><span class="p">:</span> <span class="n">ByteArray</span> <span class="p">=</span> <span class="n">retrieveBytesFromSomewhere</span><span class="p">()</span>
+
+<span class="k">val</span> <span class="py">bytesItem</span><span class="p">:</span> <span class="n">UploadableContent</span> <span class="p">=</span> <span class="n">UploadableContent</span><span class="p">.</span><span class="n">Bytes</span><span class="p">(</span>
+   <span class="n">fieldName</span> <span class="p">=</span> <span class="s">&quot;file&quot;</span><span class="p">,</span>
+   <span class="n">fileName</span> <span class="p">=</span> <span class="s">&quot;something.txt&quot;</span><span class="p">,</span>
+   <span class="n">mediaType</span> <span class="p">=</span> <span class="s">&quot;text/plain&quot;</span><span class="p">,</span>
+   <span class="n">bytes</span> <span class="p">=</span> <span class="n">byteArray</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p><strong>File</strong> from the filesystem (only available for JVM, darwin and JS):</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">fileItem</span><span class="p">:</span> <span class="n">UploadableContent</span> <span class="p">=</span> <span class="n">UploadableContent</span><span class="p">.</span><span class="n">File</span><span class="p">(</span>
+    <span class="n">fieldName</span> <span class="p">=</span> <span class="s">&quot;file&quot;</span><span class="p">,</span>
+    <span class="n">fileName</span> <span class="p">=</span> <span class="s">&quot;test.mp3&quot;</span><span class="p">,</span>
+    <span class="n">mediaType</span> <span class="p">=</span> <span class="s">&quot;audio/mpeg&quot;</span><span class="p">,</span>
+    <span class="n">file</span> <span class="p">=</span> <span class="n">FileOnDisk</span><span class="p">(</span><span class="s">&quot;/Users/petersamokhin/Desktop/test.mp3&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Something by <strong>URL</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">urlItem</span><span class="p">:</span> <span class="n">UploadableContent</span> <span class="p">=</span> <span class="n">UploadableContent</span><span class="p">.</span><span class="n">Url</span><span class="p">(</span>
+    <span class="n">fieldName</span> <span class="p">=</span> <span class="s">&quot;file&quot;</span><span class="p">,</span>
+    <span class="n">fileName</span> <span class="p">=</span> <span class="s">&quot;image.png&quot;</span><span class="p">,</span>
+    <span class="n">mediaType</span> <span class="p">=</span> <span class="s">&quot;image/png&quot;</span><span class="p">,</span>
+    <span class="n">url</span> <span class="p">=</span> <span class="s">&quot;https://example.com/image.png&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="react-on-events">React on events<a class="headerlink" href="#react-on-events" title="Permanent link">&para;</a></h2>
+<p>Use the <a href="https://vk.com/dev/bots_longpoll">Bots Long Poll API</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Start listening for the events</p>
+<p>The method for starting the listening is blocking, so do not put it at the start of your code or wrap it with the async block.</p>
+</div>
+<p>Start listening for the events:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">settings</span> <span class="p">=</span> <span class="n">VkBotsLongPollApi</span><span class="p">.</span><span class="n">Settings</span><span class="p">(</span>
+    <span class="n">wait</span> <span class="p">=</span> <span class="m">25</span><span class="p">,</span>   <span class="c1">// defaut value; recommended by the VK </span>
+    <span class="n">maxFails</span> <span class="p">=</span> <span class="m">5</span> <span class="c1">// Use VkBotsLongPollApi.Settings.IGNORE_FAILS to ignore all of the errors</span>
+<span class="p">)</span>
+
+<span class="c1">// All of the params are optional; don&#39;t forget about the note above</span>
+<span class="n">client</span><span class="p">.</span><span class="n">startLongPolling</span><span class="p">(</span><span class="n">restart</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span> <span class="n">settings</span> <span class="p">=</span> <span class="n">settings</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Listen for new messages:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">onMessage</span> <span class="p">{</span> <span class="n">event</span><span class="p">:</span> <span class="n">MessageNew</span> <span class="p">-&gt;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">isFromChat</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">client</span><span class="p">.</span><span class="n">sendMessage</span> <span class="p">{</span>
+            <span class="n">peerId</span> <span class="p">=</span> <span class="n">event</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">peerId</span>
+            <span class="n">message</span> <span class="p">=</span> <span class="s">&quot;Hello, chat&quot;</span>
+        <span class="p">}.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">client</span><span class="p">.</span><span class="n">sendMessage</span> <span class="p">{</span>
+            <span class="n">peerId</span> <span class="p">=</span> <span class="n">event</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">peerId</span>
+            <span class="n">message</span> <span class="p">=</span> <span class="s">&quot;Sorry, I ignore personal conversations.&quot;</span>
+        <span class="p">}.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Listen for all types of the events:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">onEachEvent</span> <span class="p">{</span> <span class="n">event</span><span class="p">:</span> <span class="n">JsonElement</span> <span class="p">-&gt;</span>
+    <span class="c1">// You should parse the event</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>And, of course, <code>Flow</code> example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">flows</span><span class="p">().</span><span class="n">onMessage</span><span class="p">()</span>
+    <span class="p">.</span><span class="n">flatMapLatest</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">isFromChat</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">client</span><span class="p">.</span><span class="n">flows</span><span class="p">().</span><span class="n">sendMessage</span> <span class="p">{</span>
+                <span class="n">peerId</span> <span class="p">=</span> <span class="n">it</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">peerId</span>
+                <span class="n">message</span> <span class="p">=</span> <span class="s">&quot;Hello, chat&quot;</span>
+            <span class="p">}</span> <span class="c1">// don&#39;t need to execute, etc., because flow is switch-mapped</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">client</span><span class="p">.</span><span class="n">flows</span><span class="p">().</span><span class="n">sendMessage</span> <span class="p">{</span>
+                <span class="n">peerId</span> <span class="p">=</span> <span class="n">it</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">peerId</span>
+                <span class="n">message</span> <span class="p">=</span> <span class="s">&quot;Sorry, I ignore personal conversations.&quot;</span>
+            <span class="p">}</span> <span class="c1">// don&#39;t need to execute, etc., because flow is switch-mapped</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="p">.</span><span class="n">flowOn</span><span class="p">(</span><span class="n">Dispatchers</span><span class="p">.</span><span class="n">IO</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">launchIn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="http-clients">HTTP clients<a class="headerlink" href="#http-clients" title="Permanent link">&para;</a></h2>
+<p>See: <a href="https://vksdk.github.io/vk-sdk-kotlin/http-clients/">https://vksdk.github.io/vk-sdk-kotlin/http-clients/</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../http-clients/" title="HTTP clients" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                HTTP clients
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Peter Samokhin <a href="https://petersamokhin.com">https://petersamokhin.com</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/vksdk/vk-sdk-kotlin" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://vk.com/vk_sdk" target="_blank" rel="noopener" title="vk.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
